@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MovieBox — 本地视频管理器</title>
+<meta name="description" content="MovieBox 是 macOS / Windows 上的本地视频管理器：多文件夹统一以缩略图浏览，单击用你选择的外部播放器播放。">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <nav>
+    <a class="active" href="index.html">首页</a>
+    <a href="changelog.html">更新日志</a>
+    <a href="privacy.html">隐私政策</a>
+    <a href="security.html">安全说明</a>
+    <a href="https://github.com/mackhan/MovieBox/releases/latest">下载</a>
+    <a href="https://github.com/mackhan/MovieBox/issues">反馈</a>
+  </nav>
+
+  <h1>MovieBox</h1>
+  <p class="tagline">本地视频管理器 · 一眼看全，点了就播</p>
+
+  <p>MovieBox 把散落在多个文件夹、移动硬盘里的视频收集到一个界面里，全部以缩略图呈现，
+     单击就用你指定的播放器打开。你的文件始终留在你的硬盘上。</p>
+
+  <a class="cta" href="https://github.com/mackhan/MovieBox/releases/latest">下载最新版</a>
+  <a class="cta secondary" href="changelog.html">查看更新日志</a>
+
+  <h2>主要特性</h2>
+  <div class="grid">
+    <div class="card">
+      <b>统一浏览</b>
+      <span>多个文件夹、移动硬盘、SMB / NFS 网络盘合并成一个库，网格 / 列表 / 文件夹三种视图。</span>
+    </div>
+    <div class="card">
+      <b>点了就播</b>
+      <span>单击缩略图直接用你选的外部播放器播放（IINA / VLC / mpv / QQ 影音 / 系统默认）。</span>
+    </div>
+    <div class="card">
+      <b>保险箱</b>
+      <span>把视频原地加密成 <code>.vault</code>，其他程序打不开；MovieBox 打开时自动免密解密。</span>
+    </div>
+    <div class="card">
+      <b>按人归类</b>
+      <span>同一演员的视频自动归成一组，先看文件名与元数据，识别不出时再用人脸聚类兜底。</span>
+    </div>
+    <div class="card">
+      <b>重复检测</b>
+      <span>按大小分桶 + 首尾哈希快速找出重复文件，加密文件也能和明文副本对上。</span>
+    </div>
+    <div class="card">
+      <b>收藏分类</b>
+      <span>自定义收藏分类与颜色，「精选」「稍后再看」默认内置。</span>
+    </div>
+  </div>
+
+  <h2>关于隐私</h2>
+  <p>MovieBox <b>不收集、不上传任何数据</b>。没有账号、没有统计、没有遥测。
+     扫描、缩略图、归类、加解密全部在你自己的电脑上完成。
+     详见 <a href="privacy.html">隐私政策</a> 与 <a href="security.html">安全说明</a>。</p>
+
+  <div class="note">
+    应用为本地工具，不需要联网即可使用；只有「检查更新」时会访问 GitHub Releases。
+  </div>
+
+  <h2>系统要求</h2>
+  <ul>
+    <li>macOS（Apple Silicon / Intel）</li>
+    <li>Windows 10 / 11</li>
+  </ul>
+
+  <footer>
+    MovieBox · <a href="https://github.com/mackhan/MovieBox">GitHub</a> ·
+    <a href="privacy.html">隐私政策</a> · <a href="security.html">安全说明</a>
+  </footer>
+
+</div>
+</body>
+</html>
