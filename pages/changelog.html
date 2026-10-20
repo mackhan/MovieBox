@@ -21,7 +21,7 @@
   <h1>更新日志</h1>
   <p class="meta">应用内「关于」页也可查看。历史版本安装包见 <a href="https://github.com/mackhan/MovieBox/releases">Releases</a>。</p>
 
-  <h2><span class="ver">v0.1.68</span> <span class="date">· 2026-10-19</span></h2>
+  <h2><span class="ver">v0.1.68</span> <span class="date">· 2026-10-20</span></h2>
   <h3>扫描</h3>
   <ul>
     <li>快速扫描命中缓存时校验文件是否仍存在（废纸篓恢复、外部新增的文件终于能被发现）</li>
@@ -55,12 +55,19 @@
     <li>加解密按文件串行化，杜绝并发写坏文件头</li>
     <li>解密可重入 + meta 先备份后删除，中途崩溃不再留下无法恢复的中间态</li>
     <li>加解密 I/O 异步化，批量操作不再卡住界面</li>
+    <li>文件级并发锁下沉到服务层，文件夹批量加解密不再绕过保护</li>
+    <li>解密改为「先改名后删 meta」，目标重名自动 <code>_(N)</code>，不再静默覆盖同名视频</li>
+    <li>加密改名失败会回滚文件头，避免二次加密导致永久损坏</li>
   </ul>
   <h3>其他</h3>
   <ul>
     <li>网络盘自动重连改为指数退避并设上限，轮询加并发保护</li>
-    <li>接入自动更新（GitHub Releases）</li>
-    <li>新增导出/导入配置</li>
+    <li>修复 <code>/Volumes/NAS</code> 不可用时误伤 <code>/Volumes/NAS2</code>；重新挂载会更新凭据</li>
+    <li>接入自动更新（GitHub Releases），支持 Apple Silicon 与 Intel Mac</li>
+    <li>新增导出/导入配置（导出自动剔除 API Key 等敏感项，导入做类型校验）</li>
+    <li>新增「关于」页的隐私政策 / 安全说明 / 更新日志入口</li>
+    <li>删除视频同步清理收藏，不再留下空名收藏行</li>
+    <li>补齐日文缺失文案</li>
     <li>清理 13 条锁定旧错误行为的守卫测试，改为行为断言</li>
   </ul>
 
