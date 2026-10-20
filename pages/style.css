@@ -26,6 +26,9 @@ nav {
 }
 nav a { color: var(--muted); text-decoration: none; font-size: 14px; }
 nav a:hover, nav a.active { color: var(--accent); }
+/* 返回 Atelier raIn 首页：与其它导航项区分开，放在最左并加分隔 */
+nav a.home { margin-right: 4px; padding-right: 12px; border-right: 1px solid var(--line); opacity: .9; }
+nav a.home:hover { color: var(--accent); text-decoration: none; }
 
 h1 { font-size: 30px; margin: 0 0 8px; letter-spacing: .5px; }
 h2 { font-size: 20px; margin: 38px 0 12px; padding-top: 18px; border-top: 1px solid var(--line); }
